@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
     [Range(0, 10)] public float bulletSpread;
     public Bullet bullet;
     public Transform fireFrom;
+    public GameObject newWeapon;
+    public Transform attachmentOne;
 
     //Private Variables
     private Rigidbody myRB;
@@ -69,8 +71,6 @@ public class PlayerController : MonoBehaviour {
             //Code for the player getting revived
             break;
         }
-
-        Debug.Log("What state am I in " + playerState);
 	}
 
     void FixedUpdate()
@@ -124,12 +124,29 @@ public class PlayerController : MonoBehaviour {
                 shotCounter = timeBetweenShots;
                 Bullet newBullet = Instantiate(bullet, fireFrom.position, fireFrom.rotation) as Bullet;
                 newBullet.bulletSpeed = bulletSpeed;
+                newBullet.transform.Rotate(0f, bulletSpreadWidth, 0f);
             }
-            bullet.transform.Rotate(0f, bulletSpreadWidth, 0f);
         }
         else
         {
             shotCounter = 0;
         }
     }
+
+    void OnTriggerStay(Collider theCol)
+    {
+        if (theCol.gameObject.CompareTag("Weapon"))
+        {
+            theCol.gameObject.transform.position = attachmentOne.position;
+            theCol.gameObject.transform.rotation = attachmentOne.rotation;
+            SetWeaponActive();
+        }
+    }
+
+    bool SetWeaponActive()
+    {
+        return true;
+    }
+
+
 }
