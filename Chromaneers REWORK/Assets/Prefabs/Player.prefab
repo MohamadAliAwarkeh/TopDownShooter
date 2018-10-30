@@ -288,8 +288,8 @@ MonoBehaviour:
   moveSpeed: 5
   playerState: 0
   bulletSpeed: 15
-  timeBetweenShots: 0.35
-  bulletSpread: 10
+  timeBetweenShots: 0.3
+  bulletSpread: 5
   bullet: {fileID: 114212288895167098, guid: 4095d21a5d63fb846a1313815c8d4770, type: 2}
   fireFrom: {fileID: 4180180094041464}
   newWeapon: {fileID: 1182559523811098, guid: b00d9ac935e746448a95b933c6cc138e, type: 2}
