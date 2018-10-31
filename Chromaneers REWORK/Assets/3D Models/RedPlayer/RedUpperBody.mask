@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: RedUpperBody
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/Root
+    m_Weight: 1
+  - m_Path: Armature/Root/Leg Control.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot roll.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot roll.L/Leg ik.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot roll.L/Leg ik.L/Leg ik.L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot.L/Toes.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Foot.L/Toes.L/Toes.L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Toe Control.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.L/Toe Control.L/Toe Control.L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot roll.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot roll.R/Leg ik.R.001
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot roll.R/Leg ik.R.001/Leg ik.R.001_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot.R.001
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot.R.001/Toes.R.001
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Foot.R.001/Toes.R.001/Toes.R.001_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Toe Control.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Control.R/Toe Control.R/Toe Control.R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Pole Target.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Pole Target.L/Leg Pole Target.L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Pole Target.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Leg Pole Target.R/Leg Pole Target.R_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Neck
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Neck/Head
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Neck/Head/Head_end
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Fingers01.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Fingers01.L/Fingers02.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Fingers01.L/Fingers02.L/Fingers02.L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Thumb01.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Thumb01.L/Thumb02.L
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.L/Lower Arm.L/Hand.L/Thumb01.L/Thumb02.L/Thumb02.L_end
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Fingers01.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Fingers01.R/Fingers02.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Fingers01.R/Fingers02.R/Fingers02.R_end
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Thumb01.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Thumb01.R/Thumb02.R
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Chest/Upper Arm.R/Lower Arm.R/Hand.R.001/Thumb01.R/Thumb02.R/Thumb02.R_end
+    m_Weight: 1
+  - m_Path: Armature/Root/Stomach/Upper Leg.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach/Upper Leg.L/Lower Leg.L
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach/Upper Leg.L/Lower Leg.L/Lower Leg.L_end
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach/Upper Leg.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach/Upper Leg.R/Lower Leg.R
+    m_Weight: 0
+  - m_Path: Armature/Root/Stomach/Upper Leg.R/Lower Leg.R/Lower Leg.R_end
+    m_Weight: 0
+  - m_Path: Armature/Weapon
+    m_Weight: 1
+  - m_Path: Armature/Weapon/WeaponHandle1
+    m_Weight: 1
+  - m_Path: Armature/Weapon/WeaponHandle1/WeaponHandle1_end
+    m_Weight: 1
+  - m_Path: Armature/Weapon/WeaponHandle2
+    m_Weight: 1
+  - m_Path: Armature/Weapon/WeaponHandle2/WeaponHandle2_end
+    m_Weight: 1
+  - m_Path: Cube
+    m_Weight: 1
+  - m_Path: Gun
+    m_Weight: 1

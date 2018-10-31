@@ -9,13 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8369beb36eb1924695da9a0b715bd60, type: 3}
-  m_Name: Rocket
+  m_Name: Shotgun
   m_EditorClassIdentifier: 
-  wepName: Rocket
-  damage: 3
-  fireRate: 5
-  bulletSpread: 0
-  range: 4
+  wepName: Shotgun
+  damage: 1
+  fireRate: 3
+  bulletSpread: 5
+  range: 1
   trailParticle: {fileID: 0}
-  explosionParticle: {fileID: 198200747355108154, guid: 7fa47c1b74f0b334aa25d41725cb3225,
-    type: 2}
+  explosionParticle: {fileID: 0}

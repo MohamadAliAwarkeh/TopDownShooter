@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
     [Header("Player Variables")]
     [Range(0, 10)] public float moveSpeed;
     public PlayerState playerState = PlayerState.Idle;
+    public Animator anim;
 
     [Header("Weapon Variables")]
     [Range(0, 50)] public float bulletSpeed;
@@ -33,6 +34,8 @@ public class PlayerController : MonoBehaviour {
     private Camera mainCamera;
     private float shotCounter;
     private float bulletSpreadWidth;
+    private Vector3 playerDirection;
+    private Vector2 playerLookDirection;
 
     public InputDevice Device
     {
@@ -43,6 +46,9 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         myRB = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
+        
+        playerLookDirection.x = 0f;
+        playerLookDirection.y = 1f;
 	}
 	
 	void Update () {
@@ -85,16 +91,40 @@ public class PlayerController : MonoBehaviour {
 
     void PlayerMovement()
     {
+        var xLeft = Device.LeftStickX;
+        var yLeft = Device.LeftStickY;
+        var xRight = Device.RightStickX;
+        var yRight = Device.RightStickY;
+        AnimMove(xLeft, yLeft, xRight, yRight);
+        
         moveInput = new Vector3(Device.LeftStickX, 0f, Device.LeftStickY);
         moveVelocity = moveInput * moveSpeed;
     }
 
     void PlayerRotation()
     {
-        Vector3 playerDirection = Vector3.right * Device.RightStickX + Vector3.forward * Device.RightStickY;
+        playerDirection = Vector3.right * Device.RightStickX + Vector3.forward * Device.RightStickY;
         if (playerDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            Vector3 tempRotationValue = transform.rotation.eulerAngles;
+            tempRotationValue.y = tempRotationValue.y + 17;
+            transform.rotation = Quaternion.Euler(tempRotationValue);
+            playerLookDirection.x = playerDirection.x;
+            playerLookDirection.y = playerDirection.z;   
+        }
+        else
+        {
+            Vector3 playerDirectionAlt = Vector3.right * Device.RightStickX + Vector3.forward * Device.RightStickY;
+            if (playerDirection.sqrMagnitude > 0.0f)
+            {
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+                Vector3 tempRotationValue = transform.rotation.eulerAngles;
+                tempRotationValue.y = tempRotationValue.y + 17;
+                transform.rotation = Quaternion.Euler(tempRotationValue);
+                playerLookDirection.x = playerDirectionAlt.x;
+                playerLookDirection.y = playerDirectionAlt.z;   
+            }
         }
     }
 
@@ -133,10 +163,12 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay(Collider theCol)
+    void OnTriggerEnter(Collider theCol)
     {
+        Debug.Log("I AM IN THE TRIGGER ENTER");
         if (theCol.gameObject.CompareTag("Weapon"))
         {
+            Debug.Log("I AM IN THE IF STATEMENT");
             theCol.gameObject.transform.position = attachmentOne.position;
             theCol.gameObject.transform.rotation = attachmentOne.rotation;
             SetWeaponActive();
@@ -146,6 +178,50 @@ public class PlayerController : MonoBehaviour {
     bool SetWeaponActive()
     {
         return true;
+    }
+
+    void AnimMove(float xLeft, float yLeft, float xRight, float yRight)
+    {
+        //Setting the float of the animation in the beginning 
+        anim.SetFloat("velX", xLeft);
+        anim.SetFloat("velZ", yLeft);
+
+        //Creating two new vectors, a move and look vector
+        Vector2 moveVector = new Vector2(xLeft, yLeft);
+        Vector2 lookVector = new Vector2(playerDirection.x, playerDirection.z);
+
+        //Creating a value that is based between two vectors
+        float dotMovement = Vector2.Dot(moveVector, lookVector);
+	    
+        float lookVelocity = Mathf.Sqrt(Vector2.SqrMagnitude(lookVector));
+        float moveVelocity = Mathf.Sqrt(Vector2.SqrMagnitude(moveVector));
+
+        if (lookVelocity > 0 && moveVelocity > 0)
+        {
+            //Both sticks are moving
+            anim.SetFloat("dotMovement", dotMovement);
+            anim.SetFloat("lookVelocity", lookVelocity);
+        } else if (lookVelocity > 0f)
+        {
+            //Idle but shooting
+            anim.SetFloat("dotMovement", 0f);
+            anim.SetFloat("lookVelocity", -1f);
+        } else if (moveVelocity > 0f)
+        {
+            //moving but not shooting
+            lookVector = playerLookDirection;
+            lookVector.Normalize();
+            dotMovement = Vector2.Dot(moveVector, lookVector);
+            anim.SetFloat("dotMovement", dotMovement);
+            anim.SetFloat("lookVelocity", 1f);
+            anim.SetInteger("whatStateAmI", 1);
+        }
+        else
+        {
+            anim.SetFloat("dotMovement", 0f);
+            anim.SetFloat("lookVelocity", -1f);
+            anim.SetInteger("whatStateAmI", 0);
+        }
     }
 
 

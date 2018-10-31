@@ -55,7 +55,10 @@ public class PlayersManager : MonoBehaviour {
     bool JoinButtonWasPressedOnDevice(InputDevice inputDevice)
     {
         //Providing certain inputs, and if one is pressed then the action is performed
-        return inputDevice.Action1.WasPressed || inputDevice.Action2.WasPressed || inputDevice.Action3.WasPressed || inputDevice.Action4.WasPressed;
+        return inputDevice.Action1.WasPressed 
+               || inputDevice.Action2.WasPressed 
+               || inputDevice.Action3.WasPressed 
+               || inputDevice.Action4.WasPressed;
     }
 
     PlayerController FindPlayerUsingDevice(InputDevice inputDevice)
