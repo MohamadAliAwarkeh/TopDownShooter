@@ -617,6 +617,12 @@
           <e p="Weapon.cs" t="Include" />
           <e p="WeaponPopUI.cs" t="Include" />
         </e>
+        <e p="Shaders" t="Include">
+          <e p="ToonBasic.shader" t="Include" />
+          <e p="ToonBasicOutline.shader" t="Include" />
+          <e p="ToonLit.shader" t="Include" />
+          <e p="ToonLitOutline.shader" t="Include" />
+        </e>
       </e>
       <e p="Chromaneers REWORK.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

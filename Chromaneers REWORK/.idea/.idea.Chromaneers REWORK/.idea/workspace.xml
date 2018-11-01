@@ -14,8 +14,8 @@
       <file leaf-file-name="PlayerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="685">
-              <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
+            <state relative-caret-position="-487">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1541008745620" expanded="false" signature="6:95" ph="..." />
                 <marker date="1541008745620" expanded="true" signature="120:178" ph="{...}" />
@@ -53,33 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayersManager.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs">
+      <file leaf-file-name="Bullet.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="60" column="15" lean-forward="false" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+            <state relative-caret-position="570">
+              <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
               <folding>
-                <marker date="1541003369048" expanded="false" signature="6:95" ph="..." />
-                <marker date="1541003369048" expanded="true" signature="97:929" ph="/* Players Manager is a script that handles connect players from existing devices. ... */" />
-                <marker date="1541003369048" expanded="true" signature="975:4422" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="1216:1313" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="1409:1472" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="1491:2044" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="1501:1784" ph="/* Here I am checking if a button was pressed then if the player that pressed that button ... */" />
-                <marker date="1541003369048" expanded="true" signature="1893:2041" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="1960:2031" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="2108:2404" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="2473:2955" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="2488:2678" ph="/* This is to check which player are connect and using which device, so an array ... */" />
-                <marker date="1541003369048" expanded="true" signature="2765:2927" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="2858:2917" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3017:3162" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3214:3459" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3399:3453" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3519:4198" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3647:4170" ph="{...}" />
-                <marker date="1541003369048" expanded="true" signature="3670:3784" ph="/* Takes a position off of the list created. ... */" />
-                <marker date="1541003369048" expanded="true" signature="4246:4420" ph="{...}" />
+                <marker date="1541065211570" expanded="false" signature="6:78" ph="..." />
+                <marker date="1541065211570" expanded="true" signature="116:945" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="278:488" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="432:485" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="533:686" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="605:680" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="706:943" ph="{...}" />
+                <marker date="1541065211570" expanded="true" signature="827:908" ph="/* Get nearby Objects ... */" />
               </folding>
             </state>
           </provider>
@@ -90,12 +77,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Toon.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/ToonShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/SnowShader.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       </list>
     </option>
   </component>
@@ -190,12 +182,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540976133857</updated>
-      <workItem from="1540976138067" duration="3719000" />
+      <workItem from="1540976138067" duration="4922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3719000" />
+    <option name="totallyTimeSpent" value="4922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -244,10 +236,64 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Toon.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="22" column="35" lean-forward="true" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="60" column="15" lean-forward="false" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+          <folding>
+            <marker date="1541003369048" expanded="false" signature="6:95" ph="..." />
+            <marker date="1541003369048" expanded="true" signature="97:929" ph="/* Players Manager is a script that handles connect players from existing devices. ... */" />
+            <marker date="1541003369048" expanded="true" signature="975:4422" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="1216:1313" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="1409:1472" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="1491:2044" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="1501:1784" ph="/* Here I am checking if a button was pressed then if the player that pressed that button ... */" />
+            <marker date="1541003369048" expanded="true" signature="1893:2041" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="1960:2031" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="2108:2404" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="2473:2955" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="2488:2678" ph="/* This is to check which player are connect and using which device, so an array ... */" />
+            <marker date="1541003369048" expanded="true" signature="2765:2927" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="2858:2917" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3017:3162" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3214:3459" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3399:3453" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3519:4198" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3647:4170" ph="{...}" />
+            <marker date="1541003369048" expanded="true" signature="3670:3784" ph="/* Takes a position off of the list created. ... */" />
+            <marker date="1541003369048" expanded="true" signature="4246:4420" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/ToonShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/SnowShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="64" selection-end-line="125" selection-end-column="64" />
+        <state relative-caret-position="-487">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1541008745620" expanded="false" signature="6:95" ph="..." />
             <marker date="1541008745620" expanded="true" signature="120:178" ph="{...}" />
@@ -284,32 +330,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayersManager.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="60" column="15" lean-forward="false" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="15" />
+        <state relative-caret-position="570">
+          <caret line="40" column="28" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
           <folding>
-            <marker date="1541003369048" expanded="false" signature="6:95" ph="..." />
-            <marker date="1541003369048" expanded="true" signature="97:929" ph="/* Players Manager is a script that handles connect players from existing devices. ... */" />
-            <marker date="1541003369048" expanded="true" signature="975:4422" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="1216:1313" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="1409:1472" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="1491:2044" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="1501:1784" ph="/* Here I am checking if a button was pressed then if the player that pressed that button ... */" />
-            <marker date="1541003369048" expanded="true" signature="1893:2041" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="1960:2031" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="2108:2404" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="2473:2955" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="2488:2678" ph="/* This is to check which player are connect and using which device, so an array ... */" />
-            <marker date="1541003369048" expanded="true" signature="2765:2927" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="2858:2917" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3017:3162" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3214:3459" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3399:3453" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3519:4198" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3647:4170" ph="{...}" />
-            <marker date="1541003369048" expanded="true" signature="3670:3784" ph="/* Takes a position off of the list created. ... */" />
-            <marker date="1541003369048" expanded="true" signature="4246:4420" ph="{...}" />
+            <marker date="1541065211570" expanded="false" signature="6:78" ph="..." />
+            <marker date="1541065211570" expanded="true" signature="116:945" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="278:488" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="432:485" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="533:686" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="605:680" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="706:943" ph="{...}" />
+            <marker date="1541065211570" expanded="true" signature="827:908" ph="/* Get nearby Objects ... */" />
           </folding>
         </state>
       </provider>

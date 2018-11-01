@@ -1689,7 +1689,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1665230773562120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: -4.704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4861248261375810}
@@ -1985,7 +1985,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c9c99cd23c718714baeb47c7ce730d13, type: 2}
+  - {fileID: 2100000, guid: a033450288980432ca03f85bb864cb3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2078,7 +2078,6 @@ MonoBehaviour:
   moveSpeed: 5
   playerState: 0
   anim: {fileID: 95581940638203330}
-  playerDirection: {x: 0, y: 0, z: 0}
   bulletSpeed: 15
   timeBetweenShots: 0.3
   bulletSpread: 5
@@ -2114,7 +2113,7 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: a033450288980432ca03f85bb864cb3a, type: 2}
+  - {fileID: 2100000, guid: 5d69df9d9d11e49d110086ba44295342, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
