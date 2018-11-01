@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Weapon
   - Wall
+  - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX

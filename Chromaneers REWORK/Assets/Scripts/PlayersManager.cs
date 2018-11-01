@@ -16,7 +16,8 @@ using InControl;
 //then a UI pop up will appear pausing the game stating a controller has been disconnected, and
 //to resume the game, players must reconnect that controller.
 
-public class PlayersManager : MonoBehaviour {
+public class PlayersManager : MonoBehaviour 
+{
 
     //Public Variables
     public GameObject playerPrefab;
@@ -26,18 +27,20 @@ public class PlayersManager : MonoBehaviour {
     //This is a list to show available spawnPoints for the new players to connect to
     List<Vector3> playerSpawnPoints = new List<Vector3>()
     {
-        new Vector3(1, 1, 0),
+        new Vector3(-5, 1, -4),
         new Vector3(0, 1, 0),
         new Vector3(0, 1, 1),
     };
 
     List<PlayerController> players = new List<PlayerController>(maxPlayers);
 
-	void Start () {
+	void Start () 
+	{
         InputManager.OnDeviceDetached += OnDeviceDetached;
 	}
 	
-	void Update () {
+	void Update () 
+	{
         //Here I am checking if a button was pressed then if the player that pressed that button
         //already has a controller or not, if they do not already have a controller assigned to them
         //then I create a new player for them and spawn them in the next available spawnPoint
@@ -58,12 +61,13 @@ public class PlayersManager : MonoBehaviour {
         return inputDevice.Action1.WasPressed 
                || inputDevice.Action2.WasPressed 
                || inputDevice.Action3.WasPressed 
-               || inputDevice.Action4.WasPressed;
+               || inputDevice.Action4.WasPressed
+            || Input.GetKey(KeyCode.A);
     }
 
     PlayerController FindPlayerUsingDevice(InputDevice inputDevice)
     {
-        //This is to check which player are connect and using which device, so an array
+        //This is to check which player are connected and using which device, so an array
         //will run through all currently active players and check if they are using a device 
         //or not
         var playerCount = players.Count;

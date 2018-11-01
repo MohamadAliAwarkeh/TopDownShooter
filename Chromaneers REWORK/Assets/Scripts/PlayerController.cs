@@ -10,7 +10,8 @@ public enum PlayerState
     GettingRevived,
 }
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
 
     //Public Variables
     [Header("Player Variables")]
@@ -43,7 +44,8 @@ public class PlayerController : MonoBehaviour {
         set;
     }
 
-    void Start () {
+    void Start () 
+    {
         myRB = GetComponent<Rigidbody>();
         mainCamera = FindObjectOfType<Camera>();
         
@@ -51,7 +53,8 @@ public class PlayerController : MonoBehaviour {
         playerLookDirection.y = 1f;
 	}
 	
-	void Update () {
+	void Update () 
+	{
         switch (playerState)
         {
             case PlayerState.Idle:
@@ -86,24 +89,29 @@ public class PlayerController : MonoBehaviour {
 
     void Idle()
     {
-        
+        //Having No Input?
     }
 
     void PlayerMovement()
     {
+        //This is for the AnimMove() animator
         var xLeft = Device.LeftStickX;
         var yLeft = Device.LeftStickY;
         var xRight = Device.RightStickX;
         var yRight = Device.RightStickY;
         AnimMove(xLeft, yLeft, xRight, yRight);
         
+        //Adding velocity to the player with moveSpeed to make him move
         moveInput = new Vector3(Device.LeftStickX, 0f, Device.LeftStickY);
         moveVelocity = moveInput * moveSpeed;
     }
 
     void PlayerRotation()
     {
+        //The normal direction is where the player is set to being able to move around and rotate
+        //whilst shooting
         playerDirection = Vector3.right * Device.RightStickX + Vector3.forward * Device.RightStickY;
+        //Checking if the vector3 has got a value inputed
         if (playerDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
@@ -111,43 +119,40 @@ public class PlayerController : MonoBehaviour {
             tempRotationValue.y = tempRotationValue.y + 17;
             transform.rotation = Quaternion.Euler(tempRotationValue);
             playerLookDirection.x = playerDirection.x;
-            playerLookDirection.y = playerDirection.z;   
+            playerLookDirection.y = playerDirection.z;
         }
         else
         {
-            Vector3 playerDirectionAlt = Vector3.right * Device.RightStickX + Vector3.forward * Device.RightStickY;
-            if (playerDirection.sqrMagnitude > 0.0f)
+            //The alt direction is where the player is set to being able to move around and rotate
+            //whilst not having to shoot
+            Vector3 playerDirectionAlt = Vector3.right * Device.LeftStickX + Vector3.forward * Device.LeftStickY;
+            if (playerDirectionAlt.sqrMagnitude > 0.0f)
             {
-                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+                transform.rotation = Quaternion.LookRotation(playerDirectionAlt, Vector3.up);
                 Vector3 tempRotationValue = transform.rotation.eulerAngles;
                 tempRotationValue.y = tempRotationValue.y + 17;
                 transform.rotation = Quaternion.Euler(tempRotationValue);
                 playerLookDirection.x = playerDirectionAlt.x;
-                playerLookDirection.y = playerDirectionAlt.z;   
+                playerLookDirection.y = playerDirectionAlt.z;
             }
-        }
+        }      
     }
 
     bool IsFiring()
     {
-        if (Device.RightStickX || Device.RightStickY)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        //If the inputs are pressed then bool set to true
+        //Otherwise if there are no inputs pressed, bool is set to false
+        return Device.RightStickX || Device.RightStickY;
     }
 
     void PlayerShooting()
     {
         //Add bullet spread to the weapon
         bulletSpreadWidth = Random.Range(-bulletSpread, bulletSpread);
-
+        
+        //If firing
         if (IsFiring())
         {
-            //Makes sure we can shoot, and the speed of which bullet come out
             shotCounter -= Time.deltaTime;
             if (shotCounter <= 0)
             {
@@ -156,19 +161,24 @@ public class PlayerController : MonoBehaviour {
                 newBullet.bulletSpeed = bulletSpeed;
                 newBullet.transform.Rotate(0f, bulletSpreadWidth, 0f);
             }
+
+            return;
         }
-        else
+        
+        //If not firing
+        if (!IsFiring())
         {
             shotCounter = 0;
+            return;
         }
     }
 
     void OnTriggerEnter(Collider theCol)
     {
-        Debug.Log("I AM IN THE TRIGGER ENTER");
+        //Checking whether the player is standing over a weapon and then automatically 
+        //picking it up and setting it active
         if (theCol.gameObject.CompareTag("Weapon"))
         {
-            Debug.Log("I AM IN THE IF STATEMENT");
             theCol.gameObject.transform.position = attachmentOne.position;
             theCol.gameObject.transform.rotation = attachmentOne.rotation;
             SetWeaponActive();
@@ -177,6 +187,7 @@ public class PlayerController : MonoBehaviour {
 
     bool SetWeaponActive()
     {
+        //Simply setting the picked up weapon true
         return true;
     }
 

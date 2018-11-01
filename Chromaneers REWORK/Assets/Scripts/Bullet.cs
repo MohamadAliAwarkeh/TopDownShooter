@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour {
-
+public class Bullet : MonoBehaviour 
+{
+    
     public float bulletSpeed;
     public float bulletLifeTime;
 
@@ -11,7 +12,8 @@ public class Bullet : MonoBehaviour {
 
     private bool hasExploded = false;
 
-	void Update () {
+	void Update () 
+	{
         transform.Translate(Vector3.forward * bulletSpeed * Time.deltaTime);
 
         bulletLifeTime -= Time.deltaTime;
